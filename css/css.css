@@ -59,6 +59,18 @@ html {
   font-size: 30px;
   font-weight: 400;
 }
+.txtSubTitleCover.line {
+  position: relative;
+}
+.txtSubTitleCover.line::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: calc(50% - 75px);
+  width: 150px;
+  height: 4px;
+  background-color: #ed4982;
+}
 .btn-trial {
   background-color: #ffffff;
   font-size: 24px;
@@ -491,10 +503,10 @@ main.main {
   color: #000000;
   position: relative;
 }
-.txtTitleContact::before{
+.txtTitleContact::before {
   width: calc(100% - 180px);
   height: 3px;
-  content: '';
+  content: "";
   position: absolute;
   top: calc(50% - 1.5px);
   right: 0;
@@ -517,6 +529,10 @@ main.main {
   background-color: #32689b;
   padding-top: 3rem;
   margin-top: 2rem;
+  background-image: url("../images/backgrounds/bg-footer.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .txtDetailFooter {
   padding-left: 55px;
@@ -595,36 +611,239 @@ main.main {
   color: #ffffff;
   text-align: center;
 }
-.sectionCustomerServices{
+.sectionCustomerServices {
   padding-top: 4rem;
   padding-bottom: 2rem;
 }
-.iconCustomerServices{
+.iconCustomerServices {
   width: auto;
   height: 60px;
   margin-bottom: 1rem;
 }
-.txtTitleCustommerServices{
+.txtTitleCustommerServices {
   font-size: 20px;
   font-weight: 500;
   text-align: center;
   color: #003057;
 }
-.txtDetailCustommerServices{
+.txtDetailCustommerServices {
   font-size: 16px;
   font-weight: 400;
   text-align: center;
   color: #003057;
 }
-.inputContact{
+.inputContact {
   background-color: #f6f6f6;
-  padding: 1.375rem .75rem;
+  padding: 1.375rem 0.75rem;
 }
-.btnSendMess{
+.btnSendMess {
   background-color: #1cb99a;
   color: #ffffff;
   font-size: 16px;
   border-radius: 3rem;
+}
+.boxCustomerServicer {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.boxCustomerServicer:hover {
+  background-color: #4878a4;
+  color: #ffffff;
+}
+.boxCustomerServicer:hover .txtTitleCustommerServices,
+.boxCustomerServicer:hover .txtDetailCustommerServices {
+  color: #ffffff;
+}
+.main_package {
+  background-image: url("../images/backgrounds/bg-package.png");
+  background-position: top center;
+  background-size: 100% auto;
+  padding-top: 200px;
+  background-repeat: no-repeat;
+}
+.txtTitlePackage {
+  font-size: 34px;
+  color: #ffffff;
+  font-weight: 500;
+}
+.txtSubTitlePackage {
+  font-size: 20px;
+  color: #ffffff;
+}
+.typePackageTitle {
+  font-size: 22px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 0;
+  color: #6c757d;
+}
+.packagePrice {
+  font-size: 28px;
+  text-align: center;
+  font-weight: 500;
+  color: #1cb99a;
+}
+.ulPackage {
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+.ulPackage li {
+  font-size: 16px;
+  color: #212529;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+.ulPackage li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: -25px;
+  top: 2px;
+  background-image: url("../images/package/check_pick.png");
+  background-size: contain;
+  background-position-x: center center;
+  position: absolute;
+}
+.cardPackage {
+  height: 100%;
+  position: relative;
+}
+.btnAskPackage {
+  background-image: linear-gradient(to left, #32689b, #1cb99a);
+  color: #ffffff;
+  font-size: 15px;
+  width: 100%;
+  margin: 0 0;
+  font-weight: 400;
+}
+.table-package thead tr th {
+  text-align: center;
+}
+.table-package thead tr th:nth-child(1) {
+  font-size: 26px;
+  color: #003057;
+  text-align: left;
+}
+.table-package thead tr th:nth-child(2) {
+  font-size: 20px;
+  color: #6c757d;
+}
+.table-package thead tr th:nth-child(3) {
+  font-size: 20px;
+  color: #32689b;
+}
+.table-package thead tr th:nth-child(4) {
+  font-size: 20px;
+  color: #ed4982;
+}
+.table-package tbody tr td {
+  text-align: center;
+}
+.table-package tbody tr td:nth-child(1) {
+  font-size: 16px;
+  color: #212529;
+  text-align: left;
+}
+.table-package tbody tr td:nth-child(2) {
+  color: #6c757d;
+}
+.table-package tbody tr td:nth-child(3) {
+  color: #32689b;
+}
+.table-package tbody tr td:nth-child(4) {
+  color: #ed4982;
+}
+.iconCheckPackage {
+  width: 20px;
+  height: 20px;
+}
+.txtTitleFaq {
+  font-size: 28px;
+  font-weight: 500;
+}
+.btn-link-faq {
+  color: #003057;
+  font-weight: 500;
+  position: relative;
+  margin: 0 0;
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  padding-left: 4rem;
+}
+.card-header {
+  border-bottom: 0;
+  padding: 0 0;
+  background-color: transparent;
+}
+#accordionFaq .card {
+  margin-bottom: 1.5rem;
+  border-radius: 0;
+  overflow: visible;
+}
+#accordionFaq .card .card-header {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 2rem;
+  overflow: visible;
+}
+.btn-link-faq,
+.btn-link-faq:active,
+.btn-link-faq:focus,
+.btn-link-faq:hover {
+  background-color: #f6f6f6;
+  border-radius: 2rem;
+  position: relative;
+  overflow: visible;
+}
+.btn-link-faq.collapsed {
+  background-color: transparent;
+  border: 1px solid #32689b;
+  border-bottom: 1px solid #32689b !important;
+}
+.accordion > .card > .card-header {
+  margin-bottom: 0;
+}
+.btn-link-faq::before {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  left: -20px;
+  top: calc(50% - 35px);
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/faq/bgActive.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.btn-link-faq.collapsed::before {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #32689b;
+  left: -20px;
+  top: calc(50% - 35px);
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/faq/chevron-right.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40% auto;
 }
 @media (max-width: 767px) {
   .txtTitleCover {
@@ -637,10 +856,10 @@ main.main {
     height: 508px;
     overflow: visible;
     background-size: cover !important;
-    background-position: top center!important;
+    background-position: top center !important;
     margin-top: 50px;
   }
-  .btn-trial{
+  .btn-trial {
     font-size: 18px;
     height: 50px;
     padding-top: 0.2rem;
@@ -737,10 +956,10 @@ main.main {
     width: 90%;
     background-color: #32689b;
   }
-  .txtTitleCover{
+  .txtTitleCover {
     font-size: 40px;
   }
-  .txtSubTitleCover{
+  .txtSubTitleCover {
     font-size: 24px;
   }
 }
