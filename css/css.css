@@ -16,7 +16,6 @@ html {
   box-shadow: none;
   -webkit-box-shadow: none;
   -ms-box-shadow: none;
-  width: 100vw;
 }
 .navbar-brand .logo {
   width: 90px;
@@ -845,6 +844,7 @@ main.main {
   background-position: center center;
   background-size: 40% auto;
 }
+
 @media (max-width: 767px) {
   .txtTitleCover {
     font-size: 24px;
