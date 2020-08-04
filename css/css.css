@@ -805,6 +805,42 @@ main.main {
   border: 1px solid #32689b;
   border-bottom: 1px solid #32689b !important;
 }
+.btn.btn-link.btnFaq {
+  position: relative;
+  padding-left: 70px;
+  width: 100%;
+  text-align: left;
+  height: 60px;
+}
+.btn.btn-link.btnFaq::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  left: 0px;
+  top: calc(50% - 25px);
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/faq/bgActive.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.btn.btn-link.btnFaq.collapsed::before {
+  background-color: transparent;
+  border: 1px solid #32689b;
+  border-bottom: 1px solid #32689b !important;
+  background-image: url("../images/faq/chevron-right.png");
+  background-size: 40% auto;
+}
+.accordion > .card {
+  border: 0;
+  margin-bottom: 1.5rem;
+}
 .accordion > .card > .card-header {
   margin-bottom: 0;
 }
@@ -821,7 +857,7 @@ main.main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../images/faq/bgActive.png');
+  background-image: url("../images/faq/bgActive.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -839,13 +875,154 @@ main.main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../images/faq/chevron-right.png');
+  background-image: url("../images/faq/chevron-right.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 40% auto;
 }
-
+.marginContentFunctions {
+  margin-top: 300px;
+}
+.titleFuncions {
+  font-size: 30px;
+  color: #003057;
+  font-weight: 500;
+  position: relative;
+  display: inline-flex;
+}
+.titleFuncions::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 60%;
+  left: 20%;
+  right: 20%;
+  background-color: #ed4982;
+  top: 100%;
+  border-radius: 1rem;
+}
+.titleListFunctions{
+  font-size: 24px;
+  font-weight: 500;
+  color: #003057;
+}
+.titleListFunctions img{
+  width: 25px;
+  margin-bottom: 0.25rem;
+  margin-right: 1rem;
+}
+.olFunciotnal {
+  padding-left: 3.2rem;
+}
+.olFunciotnal li{
+  font-size: 16px;
+  color: #212529;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+.olFunciotnal li .subOlFuntional{
+  list-style: none;
+  padding-left: 0.5rem;
+}
+.olFunciotnal li .subOlFuntional li{
+  font-weight: 300;
+}
+.listReportFunction{
+  font-size: 16px;
+  color: #212529;
+  font-weight: 300;
+  margin-bottom: 0;
+  padding-left: 3rem;
+}
+.sectionMacImage{
+  max-width: 1920px;
+  margin: 0 auto;
+  background-image: url('../images/functions/3.png');
+  padding-top: 1140px;
+  background-size: 100% auto;
+  margin-top: -340px;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.titleSectionApp{
+  font-size: 30px;
+  color: #003057;
+  position: relative;
+  display: inline-flex;
+}
+.titleSectionApp::after{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: #ed4982;
+  bottom: 0;
+}
+.boxContainAppData{
+  margin-top: 1.5rem;
+  background-color: #3ec3a9;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.titleApplication{
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 400;
+}
+.detaiilApplication{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.img-store{
+  width: 40%;
+  max-width: 200px;
+}
+.viewContact{
+  height: 400px;
+}
+.ipContact{
+  height: 60px;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  color: #7b7b7b;
+  font-size: 20px;
+}
+.textareaIpContact{
+  background-color: #f6f6f6;
+  color: #7b7b7b;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.btnSendContact{
+  font-size: 22px;
+  background-color: #1CB99A;
+  border-radius: 50px;
+  height: 82px;
+}
 @media (max-width: 767px) {
+  .main_package {
+    padding-top: 150px;
+    background-size: auto 800px;
+  }
+  .main_functions.main_package{
+    background-size: auto 480px;
+  }
+  
+  .marginContentFunctions{
+    margin-top: 100px;
+  }
+  .sectionMacImage{
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url('../images/functions/3.png');
+    padding-top: 280px;
+    background-size: 100% auto;
+    margin-top: -60px;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
   .txtTitleCover {
     font-size: 24px;
   }
@@ -858,6 +1035,9 @@ main.main {
     background-size: cover !important;
     background-position: top center !important;
     margin-top: 50px;
+  }
+  .viewContact{
+    height: 300px;
   }
   .btn-trial {
     font-size: 18px;
@@ -950,6 +1130,26 @@ main.main {
     height: 508px;
     overflow: visible;
   }
+  .main_package {
+    padding-top: 150px;
+    background-size: auto 800px;
+  }
+  .main_functions.main_package{
+    background-size: auto 480px;
+  }
+  .marginContentFunctions{
+    margin-top: 100px;
+  }
+  .sectionMacImage{
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url('../images/functions/3.png');
+    padding-top: 500px;
+    background-size: 100% auto;
+    margin-top: -100px;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
 }
 @media (min-width: 768px) and (max-width: 1300px) {
   .boxIntro {
@@ -961,5 +1161,18 @@ main.main {
   }
   .txtSubTitleCover {
     font-size: 24px;
+  }  
+}
+
+@media (min-width: 992px) and (max-width: 1500px){
+  .sectionMacImage{
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url('../images/functions/3.png');
+    padding-top: 850px;
+    background-size: 100% auto;
+    margin-top: -260px;
+    background-repeat: no-repeat;
+    background-position: top center;
   }
 }
