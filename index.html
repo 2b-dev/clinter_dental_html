@@ -36,6 +36,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <link rel="stylesheet" href="./css/css.css" />
   </head>
 
@@ -234,8 +242,45 @@
             </div>
           </div>
           <div class="row justify-content-center">
-            <div class="col-12 col-md-4 col-lg-3 text-center mb-3">
-              <img src="./images/clients/1.png" class="img-fluid" />
+            <div class="col-12 text-center mb-3">
+              <div class="owl-carousel owl-theme">
+                <div class="slide" data-slide-index="0">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="1">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="2">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="3">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="4">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="5">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="6">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="7">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="8">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="9">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="10">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+                <div class="slide" data-slide-index="11">
+                  <img src="./images/clients/1.png" class="img-fluid" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -254,9 +299,7 @@
                   src="./images/services/support.png"
                   class="iconCustomerServices"
                 />
-                <p class="txtTitleCustommerServices">
-                  Support 24/7
-                </p>
+                <p class="txtTitleCustommerServices">Support 24/7</p>
                 <p class="txtDetailCustommerServices">
                   ให้คำแนะนำและเป็นที่ปรึกษาคอยตอบ คำถามเกี่ยวกับการใช้ระบบ
                   ให้กับลูกค้าได้ ลูกค้าสบายใจหายห่วง เมื่อพบปัญหา
@@ -270,9 +313,7 @@
                   src="./images/services/marketing.png"
                   class="iconCustomerServices"
                 />
-                <p class="txtTitleCustommerServices">
-                  Online Marketing
-                </p>
+                <p class="txtTitleCustommerServices">Online Marketing</p>
                 <p class="txtDetailCustommerServices">
                   เรามีทีมงานให้คำปรึกษาเกี่ยวกับการตลาด ออนไลน์
                   ทางคลินิกสามารถปรึกษาการจัดทำ โปรโมชั่น
@@ -289,9 +330,7 @@
                   src="./images/services/training.png"
                   class="iconCustomerServices"
                 />
-                <p class="txtTitleCustommerServices">
-                  Onsite Training
-                </p>
+                <p class="txtTitleCustommerServices">Onsite Training</p>
                 <p class="txtDetailCustommerServices">
                   เรามีทีมงานให้การอบรมและสอนเกี่ยวกับ
                   วิธีการใช้ระบบถึงหน้างานหรือคลินิก
@@ -314,7 +353,7 @@
                 width="100%"
                 height="450"
                 frameborder="0"
-                style="border: 0;"
+                style="border: 0"
                 allowfullscreen=""
                 aria-hidden="false"
                 tabindex="0"
@@ -423,5 +462,126 @@
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
   ></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
+  <script>
+    $(document).ready(function() {
+  var el = $('.owl-carousel');
+  
+  var carousel;
+  var carouselOptions = {
+    margin: 20,
+    nav: false,
+    dots: true,
+    slideBy: 'page',
+    responsive: {
+      0: {
+        items: 1,
+        rows: 2
+      },
+      768: {
+        items: 3,
+        rows: 2
+      },
+      991: {
+        items: 4,
+        rows: 2
+      }
+    }
+  };
+
+  var viewport = function() {
+    var width;
+    if (carouselOptions.responsiveBaseElement && carouselOptions.responsiveBaseElement !== window) {
+      width = $(carouselOptions.responsiveBaseElement).width();
+    } else if (window.innerWidth) {
+      width = window.innerWidth;
+    } else if (document.documentElement && document.documentElement.clientWidth) {
+      width = document.documentElement.clientWidth;
+    } else {
+      console.warn('Can not detect viewport width.');
+    }
+    return width;
+  };
+
+  var severalRows = false;
+  var orderedBreakpoints = [];
+  for (var breakpoint in carouselOptions.responsive) {
+    if (carouselOptions.responsive[breakpoint].rows > 1) {
+      severalRows = true;
+    }
+    orderedBreakpoints.push(parseInt(breakpoint));
+  }
+  if (severalRows) {
+    orderedBreakpoints.sort(function (a, b) {
+      return b - a;
+    });
+    var slides = el.find('[data-slide-index]');
+    var slidesNb = slides.length;
+    if (slidesNb > 0) {
+      var rowsNb;
+      var previousRowsNb = undefined;
+      var colsNb;
+      var previousColsNb = undefined;
+
+      var updateRowsColsNb = function () {
+        var width =  viewport();
+        for (var i = 0; i < orderedBreakpoints.length; i++) {
+          var breakpoint = orderedBreakpoints[i];
+          if (width >= breakpoint || i == (orderedBreakpoints.length - 1)) {
+            var breakpointSettings = carouselOptions.responsive['' + breakpoint];
+            rowsNb = breakpointSettings.rows;
+            colsNb = breakpointSettings.items;
+            break;
+          }
+        }
+      };
+
+      var updateCarousel = function () {
+        updateRowsColsNb();
+
+        if (rowsNb != previousRowsNb || colsNb != previousColsNb) {
+          var reInit = false;
+          if (carousel) {
+            carousel.trigger('destroy.owl.carousel');
+            carousel = undefined;
+            slides = el.find('[data-slide-index]').detach().appendTo(el);
+            el.find('.fake-col-wrapper').remove();
+            reInit = true;
+          }
+
+          var perPage = rowsNb * colsNb;
+          var pageIndex = Math.floor(slidesNb / perPage);
+          var fakeColsNb = pageIndex * colsNb + (slidesNb >= (pageIndex * perPage + colsNb) ? colsNb : (slidesNb % colsNb));
+
+          var count = 0;
+          for (var i = 0; i < fakeColsNb; i++) {
+            var fakeCol = $('<div class="fake-col-wrapper"></div>').appendTo(el);
+            for (var j = 0; j < rowsNb; j++) {
+              var index = Math.floor(count / perPage) * perPage + (i % colsNb) + j * colsNb;
+              if (index < slidesNb) {
+                slides.filter('[data-slide-index=' + index + ']').detach().appendTo(fakeCol);
+              }
+              count++;
+            }
+          }
+
+          previousRowsNb = rowsNb;
+          previousColsNb = colsNb;
+
+          if (reInit) {
+            carousel = el.owlCarousel(carouselOptions);
+          }
+        }
+      };
+
+      $(window).on('resize', updateCarousel);
+
+      updateCarousel();
+    }
+  }
+
+  carousel = el.owlCarousel(carouselOptions);
+});
+  </script>
 </html>
